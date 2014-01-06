@@ -1,0 +1,23 @@
+{
+  "name": "heatband",
+  "version": "0.0.0",
+  "homepage": "https://github.com/karahiyo/heatband",
+  "authors": [
+    "SHIMIZU Yusuke"
+  ],
+  "description": "Heatband is a javascript module to create heatmap from some time-series data.",
+  "main": "heatband.js",
+  "keywords": [
+    "heatmap",
+    "time-series",
+    "javascript"
+  ],
+  "license": "APLv2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
