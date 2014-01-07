@@ -21,9 +21,21 @@ module.exports = function(grunt) {
                 configFile: 'karma.conf.js', 
                 autoWatch: true
             }
+        }, 
+        requirejs: {
+            compile: {
+                options: {
+                    name: "Heatband", 
+                    baseurl: "src", 
+                    mainConfigFile: "src/config.js", 
+                    out: "heatband.v0.js"
+                }
+            }
         }
     });
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-requirejs');
+
     grunt.registerTask('default', ['bower:install']);
 };

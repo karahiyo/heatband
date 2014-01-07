@@ -1,0 +1,1 @@
+var Heatband=function(){function e(){}return e.prototype.hello=function(){return"Hello heatband.js"},e}();define("Heatband",function(){});
