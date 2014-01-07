@@ -5,17 +5,17 @@ module.exports = function(config) {
   config.set({
 
     // base path, that will be used to resolve files and exclude
-    basePath: './',
+    basePath: '',
 
 
     // frameworks to use
-    frameworks: ['mocha', 'requirejs'],
+    frameworks: ['mocha', 'chai'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      {pattern: 'src/*.js', included: false},
-      {pattern: 'test/*.js', included: false}
+      'src/*.js',
+      'test/*.js'
     ],
 
 
@@ -24,11 +24,19 @@ module.exports = function(config) {
       '**/*.swp'
     ],
 
+    // for coverage reports
+    preprocessors: {
+        'src/*.js': ['coverage']
+    }, 
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
     reporters: ['progress', 'coverage'],
 
+    coverageReporter: {
+        type: 'html', 
+        dir: 'coverage/'
+    }, 
 
     // web server port
     port: 9876,
@@ -55,7 +63,7 @@ module.exports = function(config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['PhantomJS', 'Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // If browser does not capture in given timeout [ms], kill it
