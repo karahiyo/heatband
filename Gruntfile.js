@@ -15,8 +15,15 @@ module.exports = function(grunt) {
                     cleanBowerDir: false
                 }
             }
+        }, 
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js', 
+                autoWatch: true
+            }
         }
     });
     grunt.loadNpmTasks('grunt-bower-task');
+    grunt.loadNpmTasks('grunt-karma');
     grunt.registerTask('default', ['bower:install']);
 };
